@@ -47,11 +47,63 @@ class LoginForm extends StatelessWidget {
                   labelText: "Password *"
                 )
               ),
-              SizedBox(height:20.0),
-              Text("forget password?"),
-              SizedBox(height: 20.0,),
+              SizedBox(height:10.0),
+              Row(children: <Widget>[
+                Spacer(),
+                GestureDetector(
+                  child: Text("Forget Password?"),
+                  onTap: (){
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext contex){
+                        return AlertDialog(
+                          content: Form(
+                            child: Container(
+                              height: 350,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  Icon(Icons.adjust),
+                                  SizedBox(height: 10),
+                                  Text("Reset your Password"),
+                                  Divider(),
+                                  SizedBox(height: 20.0,),
+                                  Text("Enter your user account's verified email address and we will send you a password reset link."),
+                                  SizedBox(height: 20.0),
+                                  TextFormField(
+                                    decoration: const InputDecoration(
+                                      icon: Icon(Icons.email),
+                                      contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+                                      hintText: "@ E-mail",
+                                      labelText: "Email *"
+                                    ),
+                                  ),
+                                  SizedBox(height: 20.0,),
+                                  RaisedButton(
+                                    onPressed: (){},
+                                    child: Text("Reset Password"),
+                                    color: Colors.red[300],
+                                  ),
+                                  SizedBox(height: 5.0,),
+                                  Text("*Your password will be resend to email", style: TextStyle(fontSize: 10.0, fontStyle: FontStyle.italic))
+
+                                ],
+                              ),
+                          ),
+                        )
+                        );
+                      }
+                    );
+                  },
+                )
+              ],
+              ),
+              SizedBox(height: 10.0,),
               RaisedButton(
-                onPressed: (){},
+                onPressed: (){
+                  // action
+                },
                 child: Text("Sign In"),
                 color: Colors.red[300],
               ),
@@ -71,14 +123,14 @@ class LoginForm extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 10.0),
+              SizedBox(height: 20.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center ,
                 children: <Widget>[
                   Text("Don't have an account?    "),
                   GestureDetector(
                     child: Text("Sign Up", 
-                      style: TextStyle(decoration: TextDecoration.underline, color: Colors.blue)
+                      style: TextStyle( color: Colors.blue)
                       ),
                     onTap: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpForm()));

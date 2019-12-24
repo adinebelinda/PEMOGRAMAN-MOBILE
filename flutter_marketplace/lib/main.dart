@@ -29,7 +29,7 @@ class NavigatorMenu extends StatelessWidget {
                 RaisedButton(
                   onPressed: (){
                     Navigator.push(
-                    context, MaterialPageRoute(builder: (context)=>LoginForm()));
+                      context, MaterialPageRoute(builder: (context)=>LoginForm()));
                   },
                   child: Text("Login Form"),
                   color: Colors.red[300],
