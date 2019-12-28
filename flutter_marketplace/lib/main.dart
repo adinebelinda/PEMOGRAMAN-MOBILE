@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_marketplace/Layout_activity/FirstLayout.dart';
+import 'package:flutter_marketplace/UI_requirement/HomePages/HomePages.dart';
 import 'LoginForm.dart';
 
 void main(){
   runApp(MaterialApp(
     title: "Navigator",
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(
+      scaffoldBackgroundColor: Colors.white,
+      primaryColor: Colors.red[300],
+    ),
     home: NavigatorMenu(),
   ));
 }
@@ -32,6 +39,22 @@ class NavigatorMenu extends StatelessWidget {
                       context, MaterialPageRoute(builder: (context)=>LoginForm()));
                   },
                   child: Text("Login Form"),
+                  color: Colors.red[300],
+                ),
+                SizedBox(height: 10.0),
+                RaisedButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePages()));
+                  },
+                  child: Text("Home Page"),
+                  color: Colors.red[300],
+                ),
+                SizedBox(height: 10.0),
+                RaisedButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>FirstLayout()));
+                  },
+                  child: Text("First Layout"),
                   color: Colors.red[300],
                 )
               ],

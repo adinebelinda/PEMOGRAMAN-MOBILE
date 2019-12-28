@@ -69,7 +69,7 @@ class LoginForm extends StatelessWidget {
                                   Text("Reset your Password"),
                                   Divider(),
                                   SizedBox(height: 20.0,),
-                                  Text("Enter your user account's verified email address and we will send you a password reset link."),
+                                  Text("Enter your user account's verified email address and we will send you a password reset link.", style: TextStyle(fontSize:11.0)),
                                   SizedBox(height: 20.0),
                                   TextFormField(
                                     decoration: const InputDecoration(
