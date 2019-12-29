@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_marketplace/TextStyle.dart';
 import 'package:flutter_marketplace/UI_requirement/HomePages/CategoryState.dart';
 import 'package:flutter_marketplace/UI_requirement/HomePages/HomePages_background.dart';
-import 'package:flutter_marketplace/model/category.dart' as prefix0;
+import 'package:flutter_marketplace/UI_requirement/HomePages/event_wiget.dart';
+import 'package:flutter_marketplace/model/category.dart';
+import 'package:flutter_marketplace/model/event.dart';
 import 'package:provider/provider.dart';
 import '../../model/category.dart';
 import 'CategoryWidget.dart';
@@ -60,12 +62,15 @@ class HomePages extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SingleChildScrollView(
-                      scrollDirection: Axis.vertical,
-                      child: Column(
-                        children: <Widget>[
-                          
-                        ],
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      child: Consumer<CategoryState>(
+                        builder: (context,categoryState,_ ) => Column(
+                          children: <Widget>[
+                            for (final event in events.where((e) => e.categoryIds.contains(categoryState.selectedCategoryId)))
+                            EventWidget(event: event),
+                          ],
+                        ),
                       ),
                     )
                   ],
