@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_marketplace/Layout_activity/HomePages/HomePage.dart';
 import 'package:flutter_marketplace/UI_requirement/SideBarMenu/SideBar.dart';
 
 class AnimationButtomNavBar extends StatefulWidget {
@@ -11,6 +12,7 @@ class _AnimationButtomNavBarState extends State<AnimationButtomNavBar> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     SideBar(),
+    HomePage()
   ];
   void onTappedBar(int index){
     setState(() {

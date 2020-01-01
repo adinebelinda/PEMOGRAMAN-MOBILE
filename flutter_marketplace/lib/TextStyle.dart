@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+Color firstColor = Color(0xfffc4a1f);
+Color secondColor = Color(0xffaf1055);
+LinearGradient appGradient = LinearGradient(colors:[firstColor,secondColor]);
+
 final TextStyle fadedTextStyle = TextStyle(
   fontSize: 16.0,
   fontWeight: FontWeight.bold,

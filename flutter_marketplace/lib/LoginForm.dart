@@ -23,7 +23,7 @@ class LoginForm extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height:20.0),
+              // SizedBox(height:20.0),
               Text("Weding Organizer",
                 style: TextStyle(
                       fontSize: 20.0,

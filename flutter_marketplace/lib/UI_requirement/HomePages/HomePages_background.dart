@@ -9,7 +9,7 @@ class HomePagesBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeData = Theme.of(context);
-
+    final primaryColor = Colors.red[300];
     return ClipPath(
       clipper: BackgroundClipper(),
       child: Container(

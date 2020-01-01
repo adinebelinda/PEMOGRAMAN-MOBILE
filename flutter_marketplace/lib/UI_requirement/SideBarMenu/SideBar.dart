@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_marketplace/LoginForm.dart';
-import 'package:flutter_marketplace/UI_requirement/BottomNavigationBar/AnimationButtonNavBar.dart';
 import 'package:flutter_marketplace/UI_requirement/SideBarMenu/SideBarMaterial/sideBarDashboard.dart';
 import 'SideBarMaterial/sidebarMenu.dart';
 
@@ -44,22 +43,24 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin {
     _controller.dispose();
     super.dispose();
   }
-
+  
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     screenHeight = size.height;
     screenWidth = size.width;
 
-    return Scaffold(
-      backgroundColor: backgroundColor,
-      body: Stack(
-        children: <Widget>[
-          menu(context),
-          dashboard(context),
-        ],
+    return MaterialApp(
+        home: Scaffold(
+        backgroundColor: backgroundColor,
+        body:
+        Stack(
+          children: <Widget>[
+            menu(context),
+            dashboard(context),
+          ],
+        ),
       ),
-      // bottomNavigationBar: AnimationButtomNavBar(),
     );
   }
 
@@ -117,9 +118,9 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin {
                             });
                           },
                         ),
-                        Text("My Cards",
+                        Text("Discovery And Book",
                             style:
-                                TextStyle(fontSize: 24, )),
+                                TextStyle(fontSize: 16, )),
                         InkWell(
                           child: Icon(Icons.settings, ),
                           onTap: (){
@@ -128,7 +129,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin {
                           ),
                       ],
                     ),
-                    SizedBox(height: 50),
+                    SizedBox(height: 30),
                     SideBarDashboard(),
                   ],
                 ),

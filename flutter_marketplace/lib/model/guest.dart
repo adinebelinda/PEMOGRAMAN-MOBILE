@@ -7,10 +7,10 @@ class Guest{
 }
 
 final guests=[
-  Guest("assets/guest_image/guest1.dart"),
-  Guest("assets/guest_image/guest2.dart"),
-  Guest("assets/guest_image/guest3.dart"),
-  Guest("assets/guest_image/guest4.dart"),
-  Guest("assets/guest_image/guest5.dart"),
-  Guest("assets/guest_image/guest6.dart"),
+  Guest("assets/guest_image/guest1.jpg"),
+  Guest("assets/guest_image/guest2.jpg"),
+  Guest("assets/guest_image/guest3.jpg"),
+  Guest("assets/guest_image/guest4.jpg"),
+  Guest("assets/guest_image/guest5.jpg"),
+  Guest("assets/guest_image/guest6.jpg"),
 ];
