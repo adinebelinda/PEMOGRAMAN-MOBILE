@@ -4,7 +4,6 @@ import 'package:flutter_marketplace/model/event.dart';
 import '../../TextStyle.dart';
 
 class EventWidget extends StatelessWidget {
-
   final Event event;
 
   const EventWidget({Key key, this.event}) : super(key: key);
@@ -16,8 +15,7 @@ class EventWidget extends StatelessWidget {
       elevation: 4,
       color: Colors.white,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(24))
-      ),
+          borderRadius: BorderRadius.all(Radius.circular(24))),
       child: Padding(
         padding: EdgeInsets.all(20),
         child: Column(
@@ -26,31 +24,37 @@ class EventWidget extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.all(Radius.circular(30)),
               child: Image.asset(
-                event.imagePath, 
+                event.imagePath,
                 height: 150,
-                fit: BoxFit.fitWidth, ),
+                fit: BoxFit.fitWidth,
+              ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top:10.0),
+              padding: const EdgeInsets.only(top: 8.0, left: 8.0),
               child: Row(
                 children: <Widget>[
                   Expanded(
                     flex: 4,
                     child: Column(
-                      crossAxisAlignment : CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
                           event.title,
                           style: eventTitleTextStyle,
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         FittedBox(
                           child: Row(
                             children: <Widget>[
                               Icon(Icons.location_on),
-                              SizedBox(width: 5,),
+                              SizedBox(
+                                width: 5,
+                              ),
                               Text(
-                                event.location, textAlign: TextAlign.right,
+                                event.location,
+                                textAlign: TextAlign.right,
                               ),
                             ],
                           ),
@@ -59,14 +63,12 @@ class EventWidget extends StatelessWidget {
                     ),
                   ),
                   Expanded(
-                    flex:1,
-                    child: Text(
-                      event.duration.toUpperCase(),
-                      textAlign: TextAlign.right, 
-                      style: eventLocationTextStyle.copyWith(
-                        fontWeight: FontWeight.w900,
-                      )
-                    ),
+                    flex: 1,
+                    child: Text(event.duration.toUpperCase(),
+                        textAlign: TextAlign.right,
+                        style: eventLocationTextStyle.copyWith(
+                          fontWeight: FontWeight.w900,
+                        )),
                   )
                 ],
               ),

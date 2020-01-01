@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_marketplace/TextStyle.dart';
+import 'package:flutter_marketplace/UI_requirement/EventPages/EventDetail_page.dart';
 import 'package:flutter_marketplace/UI_requirement/HomePages/CategoryState.dart';
 import 'package:flutter_marketplace/UI_requirement/HomePages/HomePages_background.dart';
 import 'package:flutter_marketplace/UI_requirement/HomePages/event_wiget.dart';
@@ -68,7 +69,12 @@ class HomePages extends StatelessWidget {
                         builder: (context,categoryState,_ ) => Column(
                           children: <Widget>[
                             for (final event in events.where((e) => e.categoryIds.contains(categoryState.selectedCategoryId)))
-                            EventWidget(event: event),
+                            GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> EventDetailPage(event: event)));
+                              },
+                              child: EventWidget(event: event),
+                            )
                           ],
                         ),
                       ),
