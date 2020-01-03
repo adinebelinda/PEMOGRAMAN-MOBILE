@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "164369031186",
+    "firebase_url": "https://test-3d374.firebaseio.com",
+    "project_id": "test-3d374",
+    "storage_bucket": "test-3d374.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164369031186:android:2c2a4848909c902f0938cb",
+        "android_client_info": {
+          "package_name": "com.wkwkland.tugasmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164369031186-0od0nt65ain8hcv12mc01qdav1ce404e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEv3vjaytEs6ze2VehoaodHMDbA60lXqo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164369031186-0od0nt65ain8hcv12mc01qdav1ce404e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
