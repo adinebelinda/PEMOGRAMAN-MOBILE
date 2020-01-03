@@ -1,3 +1,5 @@
+import 'package:flutter_marketplace/model/event.dart';
+
 class ListWO{
   final String imagePath, title, description, location, punchLine1, punchLine2;
   final List categoryIds, galleryImages;
@@ -125,3 +127,16 @@ final famouzWO = ListWO(
   categoryIds: [],
   galleryImages: [],
 );
+
+final listwo=[
+  soulmateWO,
+  missPlanerWO,
+  bantuNikahWO,
+  wtfWO,
+  bestPlanerWO,
+  qadaWO,
+  ivoraWO,
+  limaWO,
+  efyeWO,
+  famouzWO
+];

@@ -25,25 +25,25 @@ class HomePages extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: <Widget>[
+                    // Padding(
+                    //   padding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 0.0),
+                    //   child: Row(
+                    //     children: <Widget>[
+                    //       Text(
+                    //         "Discover & Book",
+                    //         style: fadedTextStyle,
+                    //       ),
+                    //       Spacer(),
+                    //       Icon(
+                    //         Icons.person,
+                    //         color:Colors.white60,
+                    //         size:30.0,
+                    //       )
+                    //     ],
+                    //   ),
+                    // ),
                     Padding(
-                      padding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 0.0),
-                      child: Row(
-                        children: <Widget>[
-                          Text(
-                            "Discover & Book",
-                            style: fadedTextStyle,
-                          ),
-                          Spacer(),
-                          Icon(
-                            Icons.person,
-                            color:Colors.white60,
-                            size:30.0,
-                          )
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20.0),
+                      padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
                       child: Text(
                         "Weding Organizer",
                         style: whiteHeadingTextStyle, 

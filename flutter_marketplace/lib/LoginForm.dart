@@ -19,11 +19,11 @@ class LoginForm extends StatelessWidget {
         backgroundColor: Colors.red[300],
       ),
       body: Container(
-        margin: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
+        margin: EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 20.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              // SizedBox(height:20.0),
+              SizedBox(height:20.0),
               Text("Weding Organizer",
                 style: TextStyle(
                       fontSize: 20.0,
@@ -47,7 +47,7 @@ class LoginForm extends StatelessWidget {
                   labelText: "Password *"
                 )
               ),
-              SizedBox(height:10.0),
+              SizedBox(height:20.0),
               Row(children: <Widget>[
                 Spacer(),
                 GestureDetector(
@@ -99,7 +99,7 @@ class LoginForm extends StatelessWidget {
                 )
               ],
               ),
-              SizedBox(height: 10.0,),
+              SizedBox(height: 30.0,),
               RaisedButton(
                 onPressed: (){
                   // action
@@ -107,36 +107,36 @@ class LoginForm extends StatelessWidget {
                 child: Text("Sign In"),
                 color: Colors.red[300],
               ),
-              SizedBox(height:20.0),
-              Text("Sign in With Social Account"),
-              SizedBox(height:20.0),
-              Row(
-                children: <Widget>[
-                  Expanded(
-                    child: Icon(Icons.ac_unit),
-                  ),
-                  Expanded(
-                    child: Icon(Icons.ac_unit),
-                  ),
-                  Expanded(
-                    child: Icon(Icons.ac_unit),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20.0),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center ,
-                children: <Widget>[
-                  Text("Don't have an account?    "),
-                  GestureDetector(
-                    child: Text("Sign Up", 
-                      style: TextStyle( color: Colors.blue)
-                      ),
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpForm()));
-                    })
-                ],
-              )
+              // SizedBox(height:20.0),
+              // Text("Sign in With Social Account"),
+              // SizedBox(height:20.0),
+              // Row(
+              //   children: <Widget>[
+              //     Expanded(
+              //       child: Icon(Icons.ac_unit),
+              //     ),
+              //     Expanded(
+              //       child: Icon(Icons.ac_unit),
+              //     ),
+              //     Expanded(
+              //       child: Icon(Icons.ac_unit),
+              //     ),
+              //   ],
+              // ),
+              // SizedBox(height: 20.0),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.center ,
+              //   children: <Widget>[
+              //     Text("Don't have an account?    "),
+              //     GestureDetector(
+              //       child: Text("Sign Up", 
+              //         style: TextStyle( color: Colors.blue)
+              //         ),
+              //       onTap: () {
+              //         Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpForm()));
+              //       })
+              //   ],
+              // )
           ],),
         ),
       );

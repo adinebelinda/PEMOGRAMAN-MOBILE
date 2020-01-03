@@ -119,6 +119,99 @@ class EventDetailContent extends StatelessWidget {
                   )
               ],
             ),
+          ),
+          Padding(
+              padding: EdgeInsets.only(left: 16),
+              child: Text("Fasilitas",style: guestTextStyle,),
+          ),SizedBox(height:20),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Center(
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Text("Type", style: TextStyle(fontStyle: FontStyle.italic, fontWeight: FontWeight.w700),),
+                      Text("Regular", style: TextStyle(fontStyle: FontStyle.italic, fontWeight: FontWeight.w700),),
+                      Text("VIP", style: TextStyle(fontStyle: FontStyle.italic, fontWeight: FontWeight.w700),),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.symmetric(vertical: 4),
+                            child: Text("Decoration")),
+                          Container(
+                            margin: EdgeInsets.symmetric(vertical: 4),
+                            child: Text("Documentation")),
+                          Container(
+                            margin: EdgeInsets.symmetric(vertical: 4),
+                            child: Text("Music & sound")),
+                          Container(
+                            margin: EdgeInsets.symmetric(vertical: 4),
+                            child: Text("Food & drink")),
+                          Container(
+                            margin: EdgeInsets.symmetric(vertical: 4),
+                            child: Text("Transportation")),
+                          Container(
+                            margin: EdgeInsets.symmetric(vertical: 4),
+                            child: Text("Place")),
+                          Container(
+                            margin: EdgeInsets.symmetric(vertical: 4),
+                            child: Text("Fotograp")),
+                          Container(
+                            margin: EdgeInsets.symmetric(vertical: 4),
+                            child: Text("Wedding dress")),
+                          SizedBox(height: 10,),
+                          Container(
+                            margin: EdgeInsets.symmetric(vertical: 4),
+                            child: Text("Price"))
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Icon(Icons.check, color: Colors.red[300]),
+                          Icon(Icons.check, color: Colors.red[300]),
+                          Icon(Icons.check, color: Colors.red[300]),
+                          Icon(Icons.check, color: Colors.red[300]),
+                          Icon(Icons.close, color: Colors.grey),
+                          Icon(Icons.close, color: Colors.grey),
+                          Icon(Icons.close, color: Colors.grey),
+                          Icon(Icons.close, color: Colors.grey),
+                          SizedBox(height: 10,),
+                          RaisedButton(
+                            onPressed: (){},
+                            color: Colors.red[300],
+                            child: Text("Rp. 10Jt",style: TextStyle(color: Colors.white),)),
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Icon(Icons.check, color: Colors.red[300]),
+                          Icon(Icons.check, color: Colors.red[300]),
+                          Icon(Icons.check, color: Colors.red[300]),
+                          Icon(Icons.check, color: Colors.red[300]),
+                          Icon(Icons.check, color: Colors.red[300]),
+                          Icon(Icons.check, color: Colors.red[300]),
+                          Icon(Icons.check, color: Colors.red[300]),
+                          Icon(Icons.check, color: Colors.red[300]),
+                          SizedBox(height: 10,),
+                          RaisedButton(
+                            onPressed: (){},
+                            color: Colors.red[300],
+                            child: Text("Rp. 35Jt", style: TextStyle(color: Colors.white),)),
+                        ],
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
           )
       ],
     )

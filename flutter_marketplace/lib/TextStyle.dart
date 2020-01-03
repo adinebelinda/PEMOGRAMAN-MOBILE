@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 
 Color firstColor = Color(0xfffc4a1f);
 Color secondColor = Color(0xffaf1055);
+Color primaryTextColor = Color(0xff5f6368);
+Color secondaryTextColor = Color(0xffe93820);
+Color tertiaryTextColor = Color(0xffa7a7a7);
+Color logoTintColor = Color(0xfffce3e0);
+
 LinearGradient appGradient = LinearGradient(colors:[firstColor,secondColor]);
 
 final TextStyle fadedTextStyle = TextStyle(
@@ -56,4 +61,16 @@ final TextStyle punchLine1TextStyle = TextStyle(
 
 final TextStyle punchLine2TextStyle = punchLine1TextStyle.copyWith(
   color: Colors.black,
+);
+
+TextStyle hoursPlayedLabelTextSyle = TextStyle(
+  fontSize: 12,
+  color: Colors.black,
+  fontWeight: FontWeight.bold
+);
+
+TextStyle hoursPlayerTextStyle = TextStyle(
+  fontSize: 28,
+  color: secondaryTextColor,
+  fontWeight: FontWeight.normal
 );
