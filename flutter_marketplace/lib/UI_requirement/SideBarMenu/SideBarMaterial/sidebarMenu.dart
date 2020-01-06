@@ -33,9 +33,7 @@ class SideBarMenu extends StatelessWidget {
               children: <Widget>[
                 Icon(Icons.person_outline, color: Colors.white,),
                 SizedBox(width: 10,),
-                InkWell(
-                  onTap:(){},
-                  child: Text("Profile", style: TextStyle( color: Colors.white, fontWeight:FontWeight.bold, fontSize: 18))),
+                Text("Profile", style: TextStyle( color: Colors.white, fontWeight:FontWeight.bold, fontSize: 18)),
               ],
             ),
             SizedBox(height: 10,),
@@ -43,9 +41,7 @@ class SideBarMenu extends StatelessWidget {
               children: <Widget>[
                 Icon(Icons.notifications_none, color: Colors.white,),
                 SizedBox(width: 10,),
-                InkWell(
-                  onTap:(){},
-                  child: Text("Notification", style: TextStyle( color: Colors.white, fontWeight:FontWeight.bold, fontSize: 18)),)
+                Text("Notification", style: TextStyle( color: Colors.white, fontWeight:FontWeight.bold, fontSize: 18)),
               ],
             ),
             SizedBox(height: 10,),
@@ -53,9 +49,7 @@ class SideBarMenu extends StatelessWidget {
               children: <Widget>[
                 Icon(Icons.chat, color: Colors.white),
                 SizedBox(width: 10,),
-                InkWell(
-                  onTap:(){},
-                  child: Text("Message", style: TextStyle( color: Colors.white, fontWeight:FontWeight.bold, fontSize: 18))),
+                Text("Message", style: TextStyle( color: Colors.white, fontWeight:FontWeight.bold, fontSize: 18)),
               ],
             ),
             SizedBox(height: 10,),

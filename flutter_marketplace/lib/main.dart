@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_marketplace/UI_requirement/HomePages/HomePages.dart';
-import 'package:flutter_marketplace/UI_requirement/SideBarMenu/SideBar.dart';
-import 'package:flutter_marketplace/UI_requirement/WO_Profile/WO_Profile.dart';
+import 'package:flutter_marketplace/LoginForm.dart';
+// import 'package:flutter_marketplace/UI_requirement/SideBarMenu/SideBar.dart';
 
 void main()=>runApp(new MyApp());
 
@@ -31,7 +30,7 @@ class _MyAppState extends State<MyApp> {
         scaffoldBackgroundColor: Colors.white,
         primaryColor: Colors.red[300],
       ),
-      home: SideBar(),
+      home: LoginForm(),
       //  Scaffold(
       //   body: callPage(_currentState),
       //   bottomNavigationBar: BottomNavigationBar(
