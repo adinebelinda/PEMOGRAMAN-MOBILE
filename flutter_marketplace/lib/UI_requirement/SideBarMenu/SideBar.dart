@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_marketplace/LoginForm.dart';
 import 'package:flutter_marketplace/UI_requirement/HomePages/HomePages.dart';
 import 'package:flutter_marketplace/UI_requirement/SideBarMenu/SideBarMaterial/sideBarDashboard.dart';
-import 'package:flutter_marketplace/UI_requirement/WO_Profile/WO_Profile.dart';
+// import 'package:flutter_marketplace/UI_requirement/WO_Profile/WO_Profile.dart';
+import 'package:flutter_marketplace/UI_requirement/WO_Profile/WO_Profile_Material/details_organizer.dart';
 import 'SideBarMaterial/sidebarMenu.dart';
 
 void main(){
@@ -21,6 +22,7 @@ class SideBar extends StatefulWidget {
 }
 
 class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin {
+  
   bool isCollapsed = true;
   double screenWidth, screenHeight;
   final Duration duration = const Duration(milliseconds: 300);
@@ -56,11 +58,16 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin {
           ],
         );
       case 1: return HomePages();
-      case 2: return WOProfile();
+      case 2: return DetailsOrganizer();
       case 3: return Container(color: Colors.red[100],);
 
         break;
-      default:return SideBar();
+      default:return Stack(
+          children: <Widget>[
+            menu(context),
+            dashboard(context),
+          ],
+        );
     }
   }
 
@@ -91,15 +98,15 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.dashboard,),
-            title: Text("dashboard", style: TextStyle(fontSize: 10)),
+            title: Text("Dashboard", style: TextStyle(fontSize: 10)),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_today,),
-            title: Text("booking", style: TextStyle(fontSize: 10)),
+            title: Text("Booking", style: TextStyle(fontSize: 10)),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.message,),
-            title: Text("message", style: TextStyle(fontSize: 10),),
+            title: Text("Message", style: TextStyle(fontSize: 10),),
           ),
         ],
         ),

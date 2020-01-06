@@ -7,3 +7,4 @@ const String owner6 = "assets/guest_image/guest1.jpg";
 
 const String bgWo = "assets/bg_svg/bunga.svg";
 const String logo = "assets/bg_svg/stadia_logo.svg";
+const String iconLogo =  "assets/bg_svg/logo.png";
