@@ -1,0 +1,1 @@
+com.softdev.flutter_wedding_marketplace
