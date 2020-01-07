@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_marketplace/Service/auth.dart';
-
-<<<<<<< HEAD
 import '../../imageAsset.dart';
 
-=======
->>>>>>> 9ae376a79a54ce83b71bfe31795357a90bd12586
 class Register extends StatefulWidget {
   final Function toggleView;
   Register({this.toggleView});
@@ -91,7 +87,6 @@ class _RegisterState extends State<Register> {
                         }
                       },
                     ),
-<<<<<<< HEAD
                   ],
                 ),
               ),
@@ -99,21 +94,6 @@ class _RegisterState extends State<Register> {
           ),
         ),
       ),
-=======
-                    SizedBox(
-                      height: 12.0,
-                    ),
-                    Text(
-                      error,
-                      style: TextStyle(color: Colors.red, fontSize: 14),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
-        ),
->>>>>>> 9ae376a79a54ce83b71bfe31795357a90bd12586
     );
   }
 }
