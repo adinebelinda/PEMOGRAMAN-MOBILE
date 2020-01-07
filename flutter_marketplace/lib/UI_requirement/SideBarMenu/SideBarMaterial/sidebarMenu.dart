@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_marketplace/Service/auth.dart';
 
 
 class SideBarMenu extends StatelessWidget {
+  
+  final AuthService _auth = AuthService();
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -33,9 +37,7 @@ class SideBarMenu extends StatelessWidget {
               children: <Widget>[
                 Icon(Icons.person_outline, color: Colors.white,),
                 SizedBox(width: 10,),
-                InkWell(
-                  onTap:(){},
-                  child: Text("Profile", style: TextStyle( color: Colors.white, fontWeight:FontWeight.bold, fontSize: 18))),
+                Text("Profile", style: TextStyle( color: Colors.white, fontWeight:FontWeight.bold, fontSize: 18)),
               ],
             ),
             SizedBox(height: 10,),
@@ -43,9 +45,7 @@ class SideBarMenu extends StatelessWidget {
               children: <Widget>[
                 Icon(Icons.notifications_none, color: Colors.white,),
                 SizedBox(width: 10,),
-                InkWell(
-                  onTap:(){},
-                  child: Text("Notification", style: TextStyle( color: Colors.white, fontWeight:FontWeight.bold, fontSize: 18)),)
+                Text("Notification", style: TextStyle( color: Colors.white, fontWeight:FontWeight.bold, fontSize: 18)),
               ],
             ),
             SizedBox(height: 10,),
@@ -53,9 +53,7 @@ class SideBarMenu extends StatelessWidget {
               children: <Widget>[
                 Icon(Icons.chat, color: Colors.white),
                 SizedBox(width: 10,),
-                InkWell(
-                  onTap:(){},
-                  child: Text("Message", style: TextStyle( color: Colors.white, fontWeight:FontWeight.bold, fontSize: 18))),
+                Text("Message", style: TextStyle( color: Colors.white, fontWeight:FontWeight.bold, fontSize: 18)),
               ],
             ),
             SizedBox(height: 10,),
@@ -85,7 +83,9 @@ class SideBarMenu extends StatelessWidget {
                   Icon(Icons.exit_to_app, color: Colors.white,),
                   SizedBox(width: 10,),
                   InkWell(
-                    onTap: (){},
+                    onTap: ()async{
+                      await _auth.signOut();
+                    },
                     child: Text("Log Out", style: TextStyle( color: Colors.white, fontWeight:FontWeight.bold, fontSize: 18)))
                 ],
               ),
